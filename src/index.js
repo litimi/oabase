@@ -1,17 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+/**
+ *  组件渲染页面
+ * **/
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+import React from "react";
+import ReactDom from "react-dom";
+import styles from './index.css'
+import Rooter from './routes/index'
+
+const Div = document.createElement("div");
+Div.setAttribute("id", "root")
+document.body.appendChild(Div)
+ReactDom.render(
+  <Rooter/>,
+  document.getElementById("root")
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
